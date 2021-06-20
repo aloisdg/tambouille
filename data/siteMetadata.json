@@ -6,7 +6,7 @@
   "language": "fr-FR",
   "siteUrl": "https://tambouille.vercel.app",
   "siteRepo": "https://github.com/aloisdg/tambouille",
-  "image": "/static/images/avatar.png",
+  "image": "/static/images/alois.png",
   "socialBanner": "/static/images/twitter-card.png",
   "email": "alois@outlook.fr",
   "github": "https://github.com/aloisdg",
@@ -23,7 +23,7 @@
     "alois": {
       "name": "Aloïs de Gouvello",
       "email": "alois@outlook.fr",
-      "image": "https://yt3.ggpht.com/a/AGF-l78wIDR1ebBP138PilZ2ReOCkqWY6_XE-YdeTQ=s900-c-k-c0xffffffff-no-rj-mo"
+      "image": "https://tambouille.vercel.app/static/images/alois.png"
     }
   }
 }
