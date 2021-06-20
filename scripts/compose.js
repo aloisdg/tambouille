@@ -23,9 +23,10 @@ tags: []
 draft: true
 summary: 
 images: []
+author: kim | alois
 ---
 `
 
-fs.writeFile(`data/blog/${fileName}.${ext}`, frontMatter, (err) => {
+fs.writeFile(`data/recettes/${fileName}.${ext}`, frontMatter, (err) => {
   if (err) throw err
 })

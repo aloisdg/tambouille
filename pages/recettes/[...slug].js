@@ -7,7 +7,7 @@ import generateRss from '@/lib/generate-rss'
 import { formatSlug, getAllFilesFrontMatter, getFileBySlug, getFiles } from '@/lib/mdx'
 
 export async function getStaticPaths() {
-  const posts = getFiles('blog')
+  const posts = getFiles('recettes')
   return {
     paths: posts.map((p) => ({
       params: {
@@ -19,11 +19,11 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const allPosts = await getAllFilesFrontMatter('blog')
+  const allPosts = await getAllFilesFrontMatter('recettes')
   const postIndex = allPosts.findIndex((post) => formatSlug(post.slug) === params.slug.join('/'))
   const prev = allPosts[postIndex + 1] || null
   const next = allPosts[postIndex - 1] || null
-  const post = await getFileBySlug('blog', params.slug.join('/'))
+  const post = await getFileBySlug('recettes', params.slug.join('/'))
 
   // rss
   const rss = generateRss(allPosts)
@@ -32,7 +32,7 @@ export async function getStaticProps({ params }) {
   return { props: { post, prev, next } }
 }
 
-export default function Blog({ post, prev, next }) {
+export default function Recettes({ post, prev, next }) {
   const { mdxSource, frontMatter } = post
 
   return (

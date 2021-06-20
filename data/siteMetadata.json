@@ -1,18 +1,29 @@
 {
-  "title": "Next.js Starter Blog",
-  "author": "Tails Azimuth",
-  "headerTitle": "TailwindBlog",
-  "description": "A blog created with Next.js and Tailwind.css",
-  "language": "en-us",
-  "siteUrl": "https://tailwind-nextjs-starter-blog.vercel.app",
-  "siteRepo": "https://github.com/timlrx/tailwind-nextjs-starter-blog",
+  "title": "Tambouille",
+  "author": "Kim Clarisse & Aloïs de Gouvello",
+  "headerTitle": "Tambouille",
+  "description": "Recettes de Kim et Aloïs",
+  "language": "fr-FR",
+  "siteUrl": "https://tambouille.vercel.app",
+  "siteRepo": "https://github.com/aloisdg/tambouille",
   "image": "/static/images/avatar.png",
   "socialBanner": "/static/images/twitter-card.png",
-  "email": "address@yoursite.com",
-  "github": "https://github.com",
-  "twitter": "https://twitter.com/Twitter",
-  "facebook": "https://facebook.com",
-  "youtube": "https://youtube.com",
+  "email": "alois@outlook.fr",
+  "github": "https://github.com/aloisdg",
+  "twitter": "https://twitter.com/aloisdg",
   "linkedin": "https://www.linkedin.com",
-  "locale": "en-US"
+  "locale": "fr-FR",
+
+  "authors": {
+    "kim": {
+      "name": "Kim Clarisse",
+      "email": "kim.clarisse@protonmail.com",
+      "image": "https://media-exp3.licdn.com/dms/image/C4D03AQEtcQjfa2Jmjw/profile-displayphoto-shrink_400_400/0/1620985760974?e=1629331200&v=beta&t=yLaIHScGqvg8baBbraTO1wSOkuqL8E7I1fMyzV-1uPU"
+    },
+    "alois": {
+      "name": "Aloïs de Gouvello",
+      "email": "alois@outlook.fr",
+      "image": "https://yt3.ggpht.com/a/AGF-l78wIDR1ebBP138PilZ2ReOCkqWY6_XE-YdeTQ=s900-c-k-c0xffffffff-no-rj-mo"
+    }
+  }
 }

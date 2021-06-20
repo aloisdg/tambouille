@@ -13,7 +13,7 @@ const projectsData = [
     to the desired date and press "Go". No more worrying about lost keys or
     forgotten handphones with this simple yet affordable solution.`,
     imgSrc: '/static/images/time-machine.jpg',
-    href: '/blog/the-time-machine',
+    href: '/recettes/the-time-machine',
   },
 ]
 

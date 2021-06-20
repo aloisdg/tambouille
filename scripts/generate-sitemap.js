@@ -21,7 +21,7 @@ const siteMetadata = require('../data/siteMetadata')
               .map((page) => {
                 const path = page
                   .replace('pages/', '/')
-                  .replace('data/blog', '/blog')
+                  .replace('data/recettes', '/recettes')
                   .replace('public/', '/')
                   .replace('.js', '')
                   .replace('.mdx', '')
@@ -30,7 +30,7 @@ const siteMetadata = require('../data/siteMetadata')
                 const route = path === '/index' ? '' : path
                 return `
                         <url>
-                            <loc>${`${siteMetadata.siteUrl}${route}`}</loc>
+                            <loc>${siteMetadata.siteUrl}${route}</loc>
                         </url>
                     `
               })

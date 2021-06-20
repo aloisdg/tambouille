@@ -2,10 +2,10 @@ import { PageSeo } from '@/components/SEO'
 import siteMetadata from '@/data/siteMetadata'
 import { getAllFilesFrontMatter } from '@/lib/mdx'
 import ListLayout from '@/layouts/ListLayout'
-import { POSTS_PER_PAGE } from '../../blog'
+import { POSTS_PER_PAGE } from '../../recettes'
 
 export async function getStaticPaths() {
-  const totalPosts = await getAllFilesFrontMatter('blog')
+  const totalPosts = await getAllFilesFrontMatter('recettes')
   const totalPages = Math.ceil(totalPosts.length / POSTS_PER_PAGE)
   const paths = Array.from({ length: totalPages }, (_, i) => ({
     params: { page: (i + 1).toString() },
@@ -21,7 +21,7 @@ export async function getStaticProps(context) {
   const {
     params: { page },
   } = context
-  const posts = await getAllFilesFrontMatter('blog')
+  const posts = await getAllFilesFrontMatter('recettes')
   const pageNumber = parseInt(page)
   const initialDisplayPosts = posts.slice(
     POSTS_PER_PAGE * (pageNumber - 1),
@@ -47,7 +47,7 @@ export default function PostPage({ posts, initialDisplayPosts, pagination }) {
       <PageSeo
         title={siteMetadata.title}
         description={siteMetadata.description}
-        url={`${siteMetadata.siteUrl}/blog/${pagination.currentPage}`}
+        url={`${siteMetadata.siteUrl}/recettes/${pagination.currentPage}`}
       />
       <ListLayout
         posts={posts}

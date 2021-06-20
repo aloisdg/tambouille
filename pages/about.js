@@ -6,8 +6,8 @@ export default function About() {
   return (
     <>
       <PageSeo
-        title={`About - ${siteMetadata.author}`}
-        description={`About me - ${siteMetadata.author}`}
+        title={`About - ${siteMetadata.authors.kim.name}`}
+        description={`About me - ${siteMetadata.authors.kim.name}`}
         url={`${siteMetadata.siteUrl}/about`}
       />
       <div className="divide-y">
@@ -18,12 +18,46 @@ export default function About() {
         </div>
         <div className="items-start space-y-2 xl:grid xl:grid-cols-3 xl:gap-x-8 xl:space-y-0">
           <div className="flex flex-col items-center pt-8 space-x-2">
-            <img src={siteMetadata.image} alt="avatar" className="w-48 h-48 rounded-full" />
+            <img
+              src={siteMetadata.authors.kim.image}
+              alt="avatar"
+              className="w-48 h-48 rounded-full"
+            />
             <h3 className="pt-4 pb-2 text-2xl font-bold leading-8 tracking-tight">
-              {siteMetadata.author}
+              {siteMetadata.authors.kim.name}
             </h3>
-            <div className="text-gray-500 dark:text-gray-400">Professor of Atmospheric Science</div>
-            <div className="text-gray-500 dark:text-gray-400">Stanford University</div>
+            <div className="text-gray-500 dark:text-gray-400">QA</div>
+            <div className="flex pt-6 space-x-3">
+              <SocialIcon kind="mail" href={`mailto:kim.clarisse+tambouille@protonmail.com`} />
+              <SocialIcon kind="github" href="https://github.com/kimclarisse" />
+              <SocialIcon kind="linkedin" href="https://www.linkedin.com/in/kimclarisse/" />
+            </div>
+          </div>
+          <div className="pt-8 pb-8 prose dark:prose-dark max-w-none xl:col-span-2">
+            <p>
+              Kim est automaticienne de tests. Elle apprécie la cuisine méditérannéene et mexicaine.
+              Quand elle ne cuisine pas, elle aime les jeux narratifs et marcher entre les pins.
+            </p>
+          </div>
+        </div>
+      </div>
+      <PageSeo
+        title={`About - ${siteMetadata.authors.alois.name}`}
+        description={`About me - ${siteMetadata.authors.alois.name}`}
+        url={`${siteMetadata.siteUrl}/about`}
+      />
+      <div className="divide-y">
+        <div className="items-start space-y-2 xl:grid xl:grid-cols-3 xl:gap-x-8 xl:space-y-0">
+          <div className="flex flex-col items-center pt-8 space-x-2">
+            <img
+              src={siteMetadata.authors.alois.image}
+              alt="avatar"
+              className="w-48 h-48 rounded-full"
+            />
+            <h3 className="pt-4 pb-2 text-2xl font-bold leading-8 tracking-tight">
+              {siteMetadata.authors.alois.name}
+            </h3>
+            <div className="text-gray-500 dark:text-gray-400">Développeur</div>
             <div className="flex pt-6 space-x-3">
               <SocialIcon kind="mail" href={`mailto:${siteMetadata.email}`} />
               <SocialIcon kind="github" href={siteMetadata.github} />
@@ -35,19 +69,14 @@ export default function About() {
           </div>
           <div className="pt-8 pb-8 prose dark:prose-dark max-w-none xl:col-span-2">
             <p>
-              Tails Azimuth is a professor of atmospheric sciences at the Stanford AI Lab. His
-              research interests includes complexity modelling of tailwinds, headwinds and
-              crosswinds.
-            </p>
-            <p>
-              He leads the clean energy group which develops 3D air pollution-climate models, writes
-              differential equation solvers, and manufactures titanium plated air ballons. In his
-              free time he bakes raspberry pi.
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique
-              placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem
-              nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.
+              <span>
+                Aloïs aime l'équitation, l'océan et marcher dans la nature. Il est sympa, mais
+                rarement joignable. Quand il ne code pas des projets inutiles, il joue aux
+              </span>
+              <a className="mx-1" href="https://lichess.org/@/alois" title="lichess">
+                échecs
+              </a>
+              <span>ou traîne sur internet.</span>
             </p>
           </div>
         </div>
