@@ -6,14 +6,14 @@ export default function About() {
   return (
     <>
       <PageSeo
-        title={`About - ${siteMetadata.authors.kim.name}`}
-        description={`About me - ${siteMetadata.authors.kim.name}`}
+        title={`À propos - ${siteMetadata.authors.kim.name}`}
+        description={`À propos de ${siteMetadata.authors.kim.name}`}
         url={`${siteMetadata.siteUrl}/about`}
       />
-      <div className="divide-y">
+      <div id={siteMetadata.authors.kim.slug} className="divide-y">
         <div className="pt-6 pb-8 space-y-2 md:space-y-5">
           <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
-            About
+            À propos
           </h1>
         </div>
         <div className="items-start space-y-2 xl:grid xl:grid-cols-3 xl:gap-x-8 xl:space-y-0">
@@ -38,15 +38,19 @@ export default function About() {
               Kim est automaticienne de tests. Elle apprécie la cuisine méditérannéene et mexicaine.
               Quand elle ne cuisine pas, elle aime les jeux narratifs et marcher entre les pins.
             </p>
+            <p>
+              En plus de partager ses recettes favorites, elle traques les bugs et les fautes sur le
+              site.
+            </p>
           </div>
         </div>
       </div>
       <PageSeo
-        title={`About - ${siteMetadata.authors.alois.name}`}
-        description={`About me - ${siteMetadata.authors.alois.name}`}
+        title={`À propos - ${siteMetadata.authors.alois.name}`}
+        description={`À propos d'${siteMetadata.authors.alois.name}`}
         url={`${siteMetadata.siteUrl}/about`}
       />
-      <div className="divide-y">
+      <div id={siteMetadata.authors.alois.slug} className="divide-y">
         <div className="items-start space-y-2 xl:grid xl:grid-cols-3 xl:gap-x-8 xl:space-y-0">
           <div className="flex flex-col items-center pt-8 space-x-2">
             <img
@@ -77,6 +81,10 @@ export default function About() {
                 échecs
               </a>
               <span>ou traîne sur internet.</span>
+            </p>
+            <p>
+              En plus de partager ses recettes favorites, il créé les fonctionalités et les bugs du
+              site.
             </p>
           </div>
         </div>

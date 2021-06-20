@@ -1,6 +1,9 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
 class MyDocument extends Document {
   render() {
+    const honeycomb = {
+      backgroundSize: '40px 60px',
+    }
     return (
       <Html lang="en">
         <Head>
@@ -34,7 +37,10 @@ class MyDocument extends Document {
             crossOrigin="anonymous"
           />
         </Head>
-        <body className="antialiased text-black bg-white dark:bg-gray-900 dark:text-white">
+        <body
+          className="antialiased transition duration-700 text-black bg-white dark:bg-gray-900 dark:text-white"
+          style={honeycomb}
+        >
           <Main />
           <NextScript />
         </body>

@@ -24,7 +24,7 @@ export default function Home({ posts }) {
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
         <div className="pt-6 pb-8 space-y-2 md:space-y-5">
           <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
-            Récente
+            Bienvenue sur Tambouille!
           </h1>
           <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
             {siteMetadata.description}
@@ -33,7 +33,7 @@ export default function Home({ posts }) {
         <ul className="divide-y divide-gray-200 dark:divide-gray-700">
           {!posts.length && 'No posts found.'}
           {posts.slice(0, MAX_DISPLAY).map((frontMatter) => {
-            const { slug, date, title, summary, tags } = frontMatter
+            const { slug, date, title, summary, tags, images } = frontMatter
             return (
               <li key={slug} className="py-12">
                 <article>
@@ -46,7 +46,7 @@ export default function Home({ posts }) {
                         </time>
                       </dd>
                     </dl>
-                    <div className="space-y-5 xl:col-span-3">
+                    <div className="space-y-5 xl:col-span-2">
                       <div className="space-y-6">
                         <div>
                           <h2 className="text-2xl font-bold leading-8 tracking-tight">
@@ -70,12 +70,15 @@ export default function Home({ posts }) {
                       <div className="text-base font-medium leading-6">
                         <Link
                           href={`/recettes/${slug}`}
-                          className="text-blue-500 hover:text-blue-600 dark:hover:text-blue-400"
+                          className="text-blue-500 dark:text-orange-500 hover:text-blue-600 dark:hover:text-orange-400"
                           aria-label={`Read "${title}"`}
                         >
                           Découvrir &rarr;
                         </Link>
                       </div>
+                    </div>
+                    <div>
+                      <img className="object-contain" alt="tr" src={images[0]} />
                     </div>
                   </div>
                 </article>
@@ -88,7 +91,7 @@ export default function Home({ posts }) {
         <div className="flex justify-end text-base font-medium leading-6">
           <Link
             href="/recettes"
-            className="text-blue-500 hover:text-blue-600 dark:hover:text-blue-400"
+            className="text-blue-500 dark:text-orange-500 hover:text-blue-600 dark:hover:text-orange-400"
             aria-label="all posts"
           >
             All Posts &rarr;

@@ -2,7 +2,7 @@
   "title": "Tambouille",
   "author": "Kim Clarisse & Aloïs de Gouvello",
   "headerTitle": "Tambouille",
-  "description": "Recettes de Kim et Aloïs",
+  "description": "Notre site de recettes diverses et variées partagées par Kim, Aloïs et leurs proches à l'attention de ces derniers.",
   "language": "fr-FR",
   "siteUrl": "https://tambouille.vercel.app",
   "siteRepo": "https://github.com/aloisdg/tambouille",
@@ -16,11 +16,13 @@
 
   "authors": {
     "kim": {
+      "slug": "kim",
       "name": "Kim Clarisse",
       "email": "kim.clarisse@protonmail.com",
       "image": "https://media-exp3.licdn.com/dms/image/C4D03AQEtcQjfa2Jmjw/profile-displayphoto-shrink_400_400/0/1620985760974?e=1629331200&v=beta&t=yLaIHScGqvg8baBbraTO1wSOkuqL8E7I1fMyzV-1uPU"
     },
     "alois": {
+      "slug": "alois",
       "name": "Aloïs de Gouvello",
       "email": "alois@outlook.fr",
       "image": "https://tambouille.vercel.app/static/images/alois.png"

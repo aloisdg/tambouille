@@ -21,6 +21,7 @@ module.exports = {
       },
       colors: {
         blue: colors.lightBlue,
+        orange: colors.orange,
         code: {
           green: '#b5f4a5',
           yellow: '#ffe484',
@@ -86,17 +87,49 @@ module.exports = {
               color: theme('colors.gray.900'),
               borderLeftColor: theme('colors.gray.200'),
             },
+            // body: {
+            //   backgroundColor: `
+            // radial-gradient(circle farthest-side at 0% 50%, white 23.5%, rgba(240, 166, 17, 0) 0)
+            //   21px 30px,
+            // radial-gradient(circle farthest-side at 0% 50%, rgba(255, 187 , 17, 0.04) 24%, rgba(240, 166, 17, 0) 0) 19px 30px,
+            // linear-gradient(white 14%, rgba(240, 166, 17, 0) 0, rgba(240, 166, 17, 0) 85%, white 0) 0 0,
+            // linear-gradient(
+            //     150deg,
+            //     white 24%,
+            //     rgba(255, 187 , 17, 0.04) 0,
+            //     rgba(255, 187 , 17, 0.04) 26%,
+            //     rgba(240, 166, 17, 0) 0,
+            //     rgba(240, 166, 17, 0) 74%,
+            //     rgba(255, 187 , 17, 0.04) 0,
+            //     rgba(255, 187 , 17, 0.04) 76%,
+            //     white 0
+            //   )
+            //   0 0,
+            // linear-gradient(
+            //     30deg,
+            //     white 24%,
+            //     rgba(255, 187 , 17, 0.04) 0,
+            //     rgba(255, 187 , 17, 0.04) 26%,
+            //     rgba(240, 166, 17, 0) 0,
+            //     rgba(240, 166, 17, 0) 74%,
+            //     rgba(255, 187 , 17, 0.04) 0,
+            //     rgba(255, 187 , 17, 0.04) 76%,
+            //     white 0
+            //   )
+            //   0 0,
+            // linear-gradient(90deg, rgba(255, 187 , 17, 0.04) 2%, white 0, white 98%, rgba(255, 187 , 17, 0.04) 0%) 0 0 white`,
+            // },
           },
         },
         dark: {
           css: {
             color: theme('colors.gray.300'),
             a: {
-              color: theme('colors.blue.500'),
+              color: theme('colors.orange.500'),
               '&:hover': {
-                color: theme('colors.blue.400'),
+                color: theme('colors.orange.400'),
               },
-              code: { color: theme('colors.blue.400') },
+              code: { color: theme('colors.orange.400') },
             },
             h1: {
               fontWeight: '700',
@@ -139,6 +172,38 @@ module.exports = {
               color: theme('colors.gray.100'),
               borderLeftColor: theme('colors.gray.700'),
             },
+            //     body: {
+            //       backgroundColor: `
+            // radial-gradient(circle farthest-side at 0% 50%, rgba(17, 24, 39, var(--tw-bg-opacity)) 23.5%, rgba(240, 166, 17, 0) 0)
+            //   21px 30px,
+            // radial-gradient(circle farthest-side at 0% 50%, rgba(187, 119 , 17, 0.08) 24%, rgba(240, 166, 17, 0) 0) 19px 30px,
+            // linear-gradient(rgba(17, 24, 39, var(--tw-bg-opacity)) 14%, rgba(240, 166, 17, 0) 0, rgba(240, 166, 17, 0) 85%, rgba(17, 24, 39, var(--tw-bg-opacity)) 0) 0 0,
+            // linear-gradient(
+            //     150deg,
+            //     rgba(17, 24, 39, var(--tw-bg-opacity)) 24%,
+            //     rgba(187, 119 , 17, 0.08) 0,
+            //     rgba(187, 119 , 17, 0.08) 26%,
+            //     rgba(240, 166, 17, 0) 0,
+            //     rgba(240, 166, 17, 0) 74%,
+            //     rgba(187, 119 , 17, 0.08) 0,
+            //     rgba(187, 119 , 17, 0.08) 76%,
+            //     rgba(17, 24, 39, var(--tw-bg-opacity)) 0
+            //   )
+            //   0 0,
+            // linear-gradient(
+            //     30deg,
+            //     rgba(17, 24, 39, var(--tw-bg-opacity)) 24%,
+            //     rgba(187, 119 , 17, 0.08) 0,
+            //     rgba(187, 119 , 17, 0.08) 26%,
+            //     rgba(240, 166, 17, 0) 0,
+            //     rgba(240, 166, 17, 0) 74%,
+            //     rgba(187, 119 , 17, 0.08) 0,
+            //     rgba(187, 119 , 17, 0.08) 76%,
+            //     rgba(17, 24, 39, var(--tw-bg-opacity)) 0
+            //   )
+            //   0 0,
+            // linear-gradient(90deg, rgba(187, 119 , 17, 0.08) 2%, rgba(17, 24, 39, var(--tw-bg-opacity)) 0, rgba(17, 24, 39, var(--tw-bg-opacity)) 98%, rgba(187, 119 , 17, 0.08) 0%) 0 0 rgba(17, 24, 39, var(--tw-bg-opacity))`,
+            //     },
           },
         },
       }),
