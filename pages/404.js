@@ -10,12 +10,15 @@ export default function FourZeroFour() {
       </div>
       <div className="max-w-md">
         <p className="mb-4 text-xl font-bold leading-normal md:text-2xl">
-          Sorry we couldn't find this page.
+          Désolé cette page est introuvable.
         </p>
-        <p className="mb-8">But dont worry, you can find plenty of other things on our homepage.</p>
+        <p className="mb-8">
+          Mais ne vous inquiètez pas, vous pouvez trouver plein de bonnes choses sur notre page
+          principale.
+        </p>
         <Link href="/">
           <button className="inline px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-blue-600 dark:bg-orange-600 border border-transparent rounded-lg shadow focus:outline-none focus:shadow-outline-blue dark:focus:shadow-outline-orange hover:bg-blue-700 dark:hover:bg-orange-500">
-            Back to homepage
+            Retour à la page principale
           </button>
         </Link>
       </div>
