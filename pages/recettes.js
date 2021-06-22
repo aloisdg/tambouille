@@ -20,7 +20,7 @@ export default function Recettes({ posts, initialDisplayPosts, pagination }) {
   return (
     <>
       <PageSeo
-        title={`Recettes - ${siteMetadata.author}`}
+        title="Recettes"
         description={siteMetadata.description}
         url={`${siteMetadata.siteUrl}/recettes`}
       />

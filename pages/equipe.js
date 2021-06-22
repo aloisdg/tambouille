@@ -6,8 +6,8 @@ export default function Equipe() {
   return (
     <>
       <PageSeo
-        title={`L'équipe - ${siteMetadata.authors.kim.name}`}
-        description={`L'équipe - ${siteMetadata.authors.kim.name}`}
+        title="L'équipe"
+        description="Notre équipe de choc"
         url={`${siteMetadata.siteUrl}/equipe`}
       />
       <div id={siteMetadata.authors.kim.slug} className="divide-y">
@@ -45,11 +45,6 @@ export default function Equipe() {
           </div>
         </div>
       </div>
-      <PageSeo
-        title={`L'équipe - ${siteMetadata.authors.alois.name}`}
-        description={`L'équipe - ${siteMetadata.authors.alois.name}`}
-        url={`${siteMetadata.siteUrl}/equipe`}
-      />
       <div id={siteMetadata.authors.alois.slug} className="divide-y">
         <div className="items-start space-y-2 xl:grid xl:grid-cols-3 xl:gap-x-8 xl:space-y-0">
           <div className="flex flex-col items-center pt-8 space-x-2">

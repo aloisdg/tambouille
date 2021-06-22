@@ -9,7 +9,7 @@ export default function Projects() {
   return (
     <>
       <PageSeo
-        title={`Projects - ${siteMetadata.author}`}
+        title="Projects"
         description={siteMetadata.description}
         url={`${siteMetadata.siteUrl}/projects`}
       />

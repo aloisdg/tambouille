@@ -32,10 +32,10 @@ export const SEO = {
   ],
 }
 
-export const PageSeo = ({ title, description, url }) => {
+export const PageSeo = ({ description, url, title = null }) => {
   return (
     <NextSeo
-      title={`${title} – ${siteMetadata.title}`}
+      title={title ? `${title} | ${siteMetadata.title}` : siteMetadata.title}
       description={description}
       canonical={url}
       openGraph={{
@@ -47,7 +47,7 @@ export const PageSeo = ({ title, description, url }) => {
   )
 }
 
-export const BlogSeo = ({ title, summary, date, lastmod, url, tags, images = [] }) => {
+export const BlogSeo = ({ summary, date, lastmod, url, tags, images = [], title = null }) => {
   const publishedAt = new Date(date).toISOString()
   const modifiedAt = new Date(lastmod || date).toISOString()
   let imagesArr =
@@ -60,14 +60,14 @@ export const BlogSeo = ({ title, summary, date, lastmod, url, tags, images = [] 
   const featuredImages = imagesArr.map((img) => {
     return {
       url: `${siteMetadata.siteUrl}${img}`,
-      alt: title,
+      alt: title ?? siteMetadata.title,
     }
   })
 
   return (
     <>
       <NextSeo
-        title={`${title} – ${siteMetadata.title}`}
+        title={title ? `${title} | ${siteMetadata.title}` : siteMetadata.title}
         description={summary}
         canonical={url}
         openGraph={{
@@ -75,11 +75,11 @@ export const BlogSeo = ({ title, summary, date, lastmod, url, tags, images = [] 
           article: {
             publishedTime: publishedAt,
             modifiedTime: modifiedAt,
-            authors: [`${siteMetadata.siteUrl}/equipe`],
+            authors: [`${siteMetadata.siteUrl}/about`],
             tags,
           },
           url,
-          title,
+          title: title ?? siteMetadata.title,
           description: summary,
           images: featuredImages,
         }}
@@ -97,7 +97,7 @@ export const BlogSeo = ({ title, summary, date, lastmod, url, tags, images = [] 
         description={summary}
         images={featuredImages}
         publisherName={siteMetadata.author}
-        title={title}
+        title={title ?? siteMetadata.title}
         url={url}
       />
     </>

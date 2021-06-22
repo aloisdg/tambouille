@@ -16,8 +16,8 @@ export default function Tags({ tags }) {
   return (
     <>
       <PageSeo
-        title={`Tags - ${siteMetadata.author}`}
-        description="Recette que nous partageons"
+        title="Tags"
+        description="Recettes que nous partageons"
         url={`${siteMetadata.siteUrl}/tags`}
       />
       <div className="flex flex-col items-start justify-start divide-y divide-gray-200 dark:divide-gray-700 md:justify-center md:items-center md:divide-y-0 md:flex-row md:space-x-6 md:mt-24">

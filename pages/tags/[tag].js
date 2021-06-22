@@ -38,14 +38,27 @@ export async function getStaticProps({ params }) {
   return { props: { posts: filteredPosts, tag: params.tag } }
 }
 
+/**
+ * Capitalizes first letters of words in string.
+ * @param {string} str String to be modified
+ * @param {boolean=false} lower Whether all other letters should be lowercased
+ * @return {string}
+ * @usage
+ *   capitalize('fix this string');     // -> 'Fix This String'
+ *   capitalize('javaSCrIPT');          // -> 'JavaSCrIPT'
+ *   capitalize('javaSCrIPT', true);    // -> 'Javascript'
+ */
+const capitalize = (str, lower = false) =>
+  (lower ? str.toLowerCase() : str).replace(/(?:^|\s|["'([{])+\S/g, (match) => match.toUpperCase())
+
 export default function Tag({ posts, tag }) {
-  // Capitalize first letter and convert space to dash
-  const title = tag[0].toUpperCase() + tag.split(' ').join('-').slice(1)
+  const tagCapitalized = capitalize(tag)
+  const title = tagCapitalized.split(' ').join('-')
   return (
     <>
       <PageSeo
-        title={`${tag} - ${siteMetadata.title}`}
-        description={`${tag} tags - ${siteMetadata.title}`}
+        title={`${tagCapitalized} | Tags`}
+        description={`${tagCapitalized} | Tags | ${siteMetadata.title}`}
         url={`${siteMetadata.siteUrl}/tags/${tag}`}
       />
       <ListLayout posts={posts} title={title} />
