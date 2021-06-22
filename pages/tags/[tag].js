@@ -5,6 +5,7 @@ import generateRss from '@/lib/generate-rss'
 import { getAllFilesFrontMatter } from '@/lib/mdx'
 import { getAllTags } from '@/lib/tags'
 import kebabCase from '@/lib/utils/kebabCase'
+import capitalize from '@/lib/utils/capitalize'
 import fs from 'fs'
 import path from 'path'
 
@@ -38,26 +39,13 @@ export async function getStaticProps({ params }) {
   return { props: { posts: filteredPosts, tag: params.tag } }
 }
 
-/**
- * Capitalizes first letters of words in string.
- * @param {string} str String to be modified
- * @param {boolean=false} lower Whether all other letters should be lowercased
- * @return {string}
- * @usage
- *   capitalize('fix this string');     // -> 'Fix This String'
- *   capitalize('javaSCrIPT');          // -> 'JavaSCrIPT'
- *   capitalize('javaSCrIPT', true);    // -> 'Javascript'
- */
-const capitalize = (str, lower = false) =>
-  (lower ? str.toLowerCase() : str).replace(/(?:^|\s|["'([{])+\S/g, (match) => match.toUpperCase())
-
 export default function Tag({ posts, tag }) {
   const tagCapitalized = capitalize(tag)
   const title = tagCapitalized.split(' ').join('-')
   return (
     <>
       <PageSeo
-        title={`${tagCapitalized} | Tags`}
+        title={`${tagCapitalized} < Tags`}
         description={`${tagCapitalized} | Tags | ${siteMetadata.title}`}
         url={`${siteMetadata.siteUrl}/tags/${tag}`}
       />
