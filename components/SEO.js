@@ -75,7 +75,7 @@ export const BlogSeo = ({ title, summary, date, lastmod, url, tags, images = [] 
           article: {
             publishedTime: publishedAt,
             modifiedTime: modifiedAt,
-            authors: [`${siteMetadata.siteUrl}/about`],
+            authors: [`${siteMetadata.siteUrl}/equipe`],
             tags,
           },
           url,

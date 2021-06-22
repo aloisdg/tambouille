@@ -79,7 +79,7 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
                     </div>
                   </div>
                   <div>
-                    <img className="object-contain" alt="tr" src={images[0]} />
+                    <img className="object-contain rounded" alt="illustration" src={images[0]} />
                   </div>
                 </article>
               </li>

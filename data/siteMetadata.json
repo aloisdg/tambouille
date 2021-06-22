@@ -12,6 +12,7 @@
   "github": "https://github.com/aloisdg",
   "twitter": "https://twitter.com/aloisdg",
   "linkedin": "https://www.linkedin.com",
+  "rss": "/index.xml",
   "locale": "fr-FR",
 
   "authors": {
@@ -25,7 +26,7 @@
       "slug": "alois",
       "name": "Aloïs de Gouvello",
       "email": "alois@outlook.fr",
-      "image": "https://tambouille.vercel.app/static/images/alois.png"
+      "image": "/static/images/alois.png"
     }
   }
 }

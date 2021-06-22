@@ -34,6 +34,25 @@ export default function Home({ posts }) {
           {!posts.length && 'No posts found.'}
           {posts.slice(0, MAX_DISPLAY).map((frontMatter) => {
             const { slug, date, title, summary, tags, images } = frontMatter
+            // let thumbnail
+            // if (images[0].endsWith('.mp4')) {
+            //   thumbnail = (
+            //     <video
+            //       className="object-contain rounded"
+            //       autoPlay
+            //       loop
+            //       muted
+            //       src={images[0]}
+            //       type="video/mp4"
+            //     >
+            //       Contactez Alois et dites "video"
+            //     </video>
+            //   )
+            // } else {
+            let thumbnail = (
+              <img className="object-contain rounded" alt="illustration" src={images[0]} />
+            )
+            // }
             return (
               <li key={slug} className="py-12">
                 <article>
@@ -77,9 +96,7 @@ export default function Home({ posts }) {
                         </Link>
                       </div>
                     </div>
-                    <div>
-                      <img className="object-contain" alt="tr" src={images[0]} />
-                    </div>
+                    <div>{thumbnail}</div>
                   </div>
                 </article>
               </li>

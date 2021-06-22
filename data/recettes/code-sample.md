@@ -4,6 +4,10 @@ date: '2016-03-08'
 tags: ['markdown', 'code', 'features']
 draft: true
 summary: Example of a markdown file with code blocks and syntax highlighting
+images:
+  [
+    'https://images.pexels.com/photos/103888/pexels-photo-103888.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+  ]
 author: alois
 ---
 

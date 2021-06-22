@@ -20,8 +20,8 @@ export default function PostLayout({ children, frontMatter, next, prev }) {
     <SectionContainer>
       <BlogSeo url={`${siteMetadata.siteUrl}/recettes/${frontMatter.slug}`} {...frontMatter} />
       <article>
-        <div className="xl:divide-y xl:divide-gray-200 xl:dark:divide-gray-700">
-          <header className="pt-6 xl:pb-6">
+        <div className="xl:divide-y xl:divide-gray-200 xl:dark:divide-gray-700 print:xl:divide-white print:xl:dark:divide-white print:xl:divide-y-0">
+          <header className="pt-6 xl:pb-6 print:hidden">
             <div className="space-y-1 text-center">
               <dl className="space-y-10">
                 <div>
@@ -39,16 +39,17 @@ export default function PostLayout({ children, frontMatter, next, prev }) {
             </div>
           </header>
           <div
-            className="pb-8 divide-y divide-gray-200 xl:divide-y-0 dark:divide-gray-700 xl:grid xl:grid-cols-4 xl:gap-x-6"
+            className="pb-8 divide-y divide-gray-200 xl:divide-y-0 dark:divide-gray-700 print:xl:divide-white print:xl:divide-transparent print:xl:divide-y-0 xl:grid xl:grid-cols-4 xl:gap-x-6"
             style={{ gridTemplateRows: 'auto 1fr' }}
           >
             <Link
-              href={`/about#${siteMetadata.authors[author].slug}`}
+              href={`/equipe#${siteMetadata.authors[author].slug}`}
               aria-label={`Link to ${siteMetadata.authors[author].name}`}
-              title={`À propos de ${siteMetadata.authors[author].name}`}
+              title={`L'équipe - ${siteMetadata.authors[author].name}`}
+              className="print:hidden"
             >
               <dl className="pt-6 pb-10 xl:pt-11 xl:border-b xl:border-gray-200 xl:dark:border-gray-700">
-                <dt className="sr-only">Auteur</dt>
+                <dt className="sr-only">Auteur ou autrice</dt>
                 <dd>
                   <ul className="flex justify-center space-x-8 xl:block sm:space-x-12 xl:space-x-0 xl:space-y-8">
                     <li className="flex items-center space-x-2 flex-col">
@@ -68,17 +69,29 @@ export default function PostLayout({ children, frontMatter, next, prev }) {
                 </dd>
               </dl>
             </Link>
-            <div className="divide-y divide-gray-200 dark:divide-gray-700 xl:pb-0 xl:col-span-3 xl:row-span-2">
-              <div className="pt-10 pb-8 prose dark:prose-dark max-w-none">{children}</div>
-              <div className="pt-6 pb-6 text-sm text-gray-700 dark:text-gray-300">
+            <div className="xl:pb-0 xl:col-span-3 xl:row-span-2 relative">
+              <div className="pt-10 absolute right-0 print:hidden">
+                <button
+                  className="border border-transparent rounded-xl focus:ring-2 focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-offset-black focus:ring-blue-900 dark:focus:ring-orange-300 focus:outline-none transition-colors duration-200"
+                  type="button"
+                  onClick={() => window.print()}
+                  title={`imprimer la recette: ${title}`}
+                >
+                  <span role="img" aria-label="imprimer" className="text-3xl">
+                    🖨️
+                  </span>
+                </button>
+              </div>
+              <div className="pt-10 prose dark:prose-dark max-w-none">{children}</div>
+              {/* <div className="pt-6 pb-6 text-sm text-gray-700 dark:text-gray-300 print:hidden">
                 <Link href={discussUrl(slug)} rel="nofollow">
                   {'Discuss on Twitter'}
                 </Link>
                 {` • `}
                 <Link href={editUrl(fileName)}>{'View on GitHub'}</Link>
-              </div>
+              </div> */}
             </div>
-            <footer>
+            <footer className="print:hidden">
               <div className="text-sm font-medium leading-5 divide-gray-200 xl:divide-y dark:divide-gray-700 xl:col-start-1 xl:row-start-2">
                 {tags && (
                   <div className="py-4 xl:py-8">

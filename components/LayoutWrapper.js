@@ -11,7 +11,7 @@ const LayoutWrapper = ({ children }) => {
   return (
     <SectionContainer>
       <div className="flex flex-col justify-between h-screen">
-        <header className="flex items-center justify-between py-10">
+        <header className="flex items-center justify-between py-10 print:hidden">
           <div>
             <Link href="/" aria-label="nos recettes">
               <div className="flex items-center justify-between">
@@ -45,7 +45,7 @@ const LayoutWrapper = ({ children }) => {
           </div>
         </header>
         <main className="mb-auto">{children}</main>
-        <Footer />
+        <Footer className="print:hidden" />
       </div>
     </SectionContainer>
   )

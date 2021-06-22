@@ -2,18 +2,18 @@ import siteMetadata from '@/data/siteMetadata'
 import SocialIcon from '@/components/social-icons'
 import { PageSeo } from '@/components/SEO'
 
-export default function About() {
+export default function Equipe() {
   return (
     <>
       <PageSeo
-        title={`À propos - ${siteMetadata.authors.kim.name}`}
-        description={`À propos de ${siteMetadata.authors.kim.name}`}
-        url={`${siteMetadata.siteUrl}/about`}
+        title={`L'équipe - ${siteMetadata.authors.kim.name}`}
+        description={`L'équipe - ${siteMetadata.authors.kim.name}`}
+        url={`${siteMetadata.siteUrl}/equipe`}
       />
       <div id={siteMetadata.authors.kim.slug} className="divide-y">
         <div className="pt-6 pb-8 space-y-2 md:space-y-5">
           <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
-            À propos
+            L'équipe
           </h1>
         </div>
         <div className="items-start space-y-2 xl:grid xl:grid-cols-3 xl:gap-x-8 xl:space-y-0">
@@ -46,9 +46,9 @@ export default function About() {
         </div>
       </div>
       <PageSeo
-        title={`À propos - ${siteMetadata.authors.alois.name}`}
-        description={`À propos d'${siteMetadata.authors.alois.name}`}
-        url={`${siteMetadata.siteUrl}/about`}
+        title={`L'équipe - ${siteMetadata.authors.alois.name}`}
+        description={`L'équipe - ${siteMetadata.authors.alois.name}`}
+        url={`${siteMetadata.siteUrl}/equipe`}
       />
       <div id={siteMetadata.authors.alois.slug} className="divide-y">
         <div className="items-start space-y-2 xl:grid xl:grid-cols-3 xl:gap-x-8 xl:space-y-0">
@@ -65,8 +65,6 @@ export default function About() {
             <div className="flex pt-6 space-x-3">
               <SocialIcon kind="mail" href={`mailto:${siteMetadata.email}`} />
               <SocialIcon kind="github" href={siteMetadata.github} />
-              <SocialIcon kind="facebook" href={siteMetadata.facebook} />
-              <SocialIcon kind="youtube" href={siteMetadata.youtube} />
               <SocialIcon kind="linkedin" href={siteMetadata.linkedin} />
               <SocialIcon kind="twitter" href={siteMetadata.twitter} />
             </div>
