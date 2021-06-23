@@ -52,18 +52,14 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
           {!filteredBlogPosts.length && 'No posts found.'}
           {displayPosts.map((frontMatter) => {
             const { slug, date, title, summary, tags, images } = frontMatter
+            let thumbnail = (
+              <img className="object-contain rounded" alt="illustration" src={images[0]} />
+            )
             return (
               <li key={slug} className="py-4">
-                <article className="space-y-2 xl:grid xl:grid-cols-4 xl:space-y-0 xl:items-baseline">
-                  <dl>
-                    <dt className="sr-only">Publiée le</dt>
-                    <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
-                      <time dateTime={date}>
-                        {new Date(date).toLocaleDateString(siteMetadata.locale, postDateTemplate)}
-                      </time>
-                    </dd>
-                  </dl>
-                  <div className="space-y-3 xl:col-span-2">
+                <article className="space-y-2 xl:grid xl:grid-cols-4 xl:space-y-0 xl:gap-4">
+                  <div>{thumbnail}</div>
+                  <div className="space-y-3 xl:col-span-3">
                     <div>
                       <h3 className="text-2xl font-bold leading-8 tracking-tight text-gray-900 dark:text-gray-100">
                         <Link href={`/recettes/${slug}`}>{title}</Link>
@@ -77,9 +73,6 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
                     <div className="prose text-gray-500 max-w-none dark:text-gray-400">
                       {summary}
                     </div>
-                  </div>
-                  <div>
-                    <img className="object-contain rounded" alt="illustration" src={images[0]} />
                   </div>
                 </article>
               </li>
