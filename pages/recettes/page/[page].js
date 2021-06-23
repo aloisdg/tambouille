@@ -45,7 +45,7 @@ export default function PostPage({ posts, initialDisplayPosts, pagination }) {
   return (
     <>
       <PageSeo
-        title={`postpage - ${siteMetadata.title}`}
+        title={`postpage | ${siteMetadata.title}`}
         description={siteMetadata.description}
         url={`${siteMetadata.siteUrl}/recettes/${pagination.currentPage}`}
       />

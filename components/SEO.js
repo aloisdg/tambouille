@@ -47,7 +47,7 @@ export const PageSeo = ({ description, url, title = null }) => {
   )
 }
 
-export const BlogSeo = ({ summary, date, lastmod, url, tags, images = [], title = null }) => {
+export const BlogSeo = ({ summary, date, lastmod, url, title, tags, images = [] }) => {
   const publishedAt = new Date(date).toISOString()
   const modifiedAt = new Date(lastmod || date).toISOString()
   let imagesArr =
@@ -57,12 +57,10 @@ export const BlogSeo = ({ summary, date, lastmod, url, tags, images = [], title 
       ? [images]
       : images
 
-  const featuredImages = imagesArr.map((img) => {
-    return {
-      url: `${siteMetadata.siteUrl}${img}`,
-      alt: title ?? siteMetadata.title,
-    }
-  })
+  const featuredImages = imagesArr.map((img) => ({
+    url: `${siteMetadata.siteUrl}${img}`,
+    alt: title ?? siteMetadata.title,
+  }))
 
   return (
     <>

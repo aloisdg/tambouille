@@ -45,7 +45,7 @@ export default function Tag({ posts, tag }) {
   return (
     <>
       <PageSeo
-        title={`${tagCapitalized} < Tags`}
+        title={`${tagCapitalized} | Tags`}
         description={`${tagCapitalized} | Tags | ${siteMetadata.title}`}
         url={`${siteMetadata.siteUrl}/tags/${tag}`}
       />
