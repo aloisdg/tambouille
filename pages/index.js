@@ -46,7 +46,9 @@ export default function Home({ posts }) {
             //   )
             // } else {
             let thumbnail = (
-              <img className="object-contain rounded" alt="illustration" src={images[0]} />
+              <Link href={`/recettes/${slug}`} title={title}>
+                <img className="object-contain rounded" alt="illustration" src={images[0]} />
+              </Link>
             )
             // }
             return (

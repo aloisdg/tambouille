@@ -53,7 +53,9 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
           {displayPosts.map((frontMatter) => {
             const { slug, date, title, summary, tags, images } = frontMatter
             let thumbnail = (
-              <img className="object-contain rounded" alt="illustration" src={images[0]} />
+              <Link href={`/recettes/${slug}`} title={title}>
+                <img className="object-contain rounded" alt="illustration" src={images[0]} />
+              </Link>
             )
             return (
               <li key={slug} className="py-4">
