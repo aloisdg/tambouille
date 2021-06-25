@@ -1,10 +1,9 @@
 import Link from '@/components/Link'
 import Tag from '@/components/Tag'
-import siteMetadata from '@/data/siteMetadata'
 import { useState } from 'react'
 import Pagination from '@/components/Pagination'
-
-const postDateTemplate = { year: 'numeric', month: 'long', day: 'numeric' }
+import Image from 'next/image'
+import Article from '@/components/Article'
 
 export default function ListLayout({ posts, title, initialDisplayPosts = [], pagination }) {
   const [searchValue, setSearchValue] = useState('')
@@ -50,36 +49,16 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
         </div>
         <ul>
           {!filteredBlogPosts.length && 'No posts found.'}
-          {displayPosts.map((frontMatter) => {
-            const { slug, date, title, summary, tags, images } = frontMatter
-            let thumbnail = (
-              <Link href={`/recettes/${slug}`} title={title}>
-                <img className="object-contain rounded" alt="illustration" src={images[0]} />
-              </Link>
-            )
-            return (
-              <li key={slug} className="py-4">
-                <article className="space-y-2 xl:grid xl:grid-cols-4 xl:space-y-0 xl:gap-4">
-                  <div>{thumbnail}</div>
-                  <div className="space-y-3 xl:col-span-3">
-                    <div>
-                      <h3 className="text-2xl font-bold leading-8 tracking-tight text-gray-900 dark:text-gray-100">
-                        <Link href={`/recettes/${slug}`}>{title}</Link>
-                      </h3>
-                      <div className="flex flex-wrap">
-                        {tags.map((tag) => (
-                          <Tag key={tag} text={tag} />
-                        ))}
-                      </div>
-                    </div>
-                    <div className="prose text-gray-500 max-w-none dark:text-gray-400">
-                      {summary}
-                    </div>
-                  </div>
-                </article>
-              </li>
-            )
-          })}
+          {displayPosts.map((frontMatter) => (
+            <li key={frontMatter.slug} className="py-4">
+              <Article
+                {...frontMatter}
+                image={frontMatter.images[0]}
+                hasExtraLink={false}
+                isH2={false}
+              />
+            </li>
+          ))}
         </ul>
       </div>
       {pagination && pagination.totalPages > 1 && !searchValue && (
