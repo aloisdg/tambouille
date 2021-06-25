@@ -6,7 +6,7 @@ Tambouille is a personnal french recipes website aimed to my family and acquaint
 
 ## Stack
 
-Tambouille use:
+Tambouille uses:
 
 - React
 - Next.js
