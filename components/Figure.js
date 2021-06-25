@@ -1,7 +1,21 @@
+import Image from 'next/image'
+
 const Figure = ({ alt, src, srcurl, author, authorurl, host, hosturl }) => {
   if (!alt || !src || !author || !authorurl || !host || !hosturl) return null
 
-  let image = <img className="rounded" style={{ margin: '0' }} alt={alt} src={src} />
+  let image
+  // image = (
+  //   <Image
+  //     alt={alt}
+  //     src={src}
+  //     className="rounded" // object-cover object-center"
+  //     style={{ margin: '0' }}
+  //     // layout="fill"
+  //     width={dimensions.width}
+  //     height={dimensions.height}
+  //   />
+  // )
+  image = <img className="rounded w-full" style={{ margin: '0' }} alt={alt} src={src} />
   let caption = (
     <figcaption className="text-center">
       Photo par{' '}
@@ -15,9 +29,9 @@ const Figure = ({ alt, src, srcurl, author, authorurl, host, hosturl }) => {
     </figcaption>
   )
   return (
-    <figure className="print:hidden">
+    <figure className="print:hidden flex flex-col items-center relative">
       {srcurl ? (
-        <a href={srcurl} title="Voir l'image">
+        <a className="w-full" href={srcurl} title="Voir l'image">
           {image}
         </a>
       ) : (
