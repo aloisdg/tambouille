@@ -39,7 +39,7 @@ export default function Equipe() {
               Quand elle a la flemme de cuisiner, elle joue à des jeux de rôle et marche entre les pins au clair de lune.
             </p>
             <p>
-              En plus de partager ses recettes favorites, elle traques les bugs et les fautes sur le
+              En plus de partager ses recettes favorites, elle traque les bugs et les fautes sur le
               site. Parfois.
             </p>
           </div>
