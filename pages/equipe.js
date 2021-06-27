@@ -36,11 +36,11 @@ export default function Equipe() {
           <div className="pt-8 pb-8 prose dark:prose-dark max-w-none xl:col-span-2">
             <p>
               Kim est automaticienne de tests. Elle apprécie la cuisine méditérannéene et mexicaine.
-              Quand elle ne cuisine pas, elle aime les jeux narratifs et marcher entre les pins.
+              Quand elle a la flemme de cuisiner, elle joue à des jeux de rôle et marche entre les pins au clair de lune.
             </p>
             <p>
               En plus de partager ses recettes favorites, elle traques les bugs et les fautes sur le
-              site.
+              site. Parfois.
             </p>
           </div>
         </div>
@@ -67,7 +67,7 @@ export default function Equipe() {
           <div className="pt-8 pb-8 prose dark:prose-dark max-w-none xl:col-span-2">
             <p>
               <span>
-                Aloïs aime l'équitation, l'océan et marcher dans la nature. Il est sympa, mais
+                Aloïs aime faire du poneys, l'océan et marcher dans la nature. Il est sympa, mais
                 rarement joignable. Quand il ne code pas des projets inutiles, il joue aux
               </span>
               <a className="mx-1" href="https://lichess.org/@/alois" title="lichess">
