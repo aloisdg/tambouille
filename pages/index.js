@@ -39,9 +39,9 @@ export default function Home({ posts }) {
           <Link
             href="/recettes"
             className="text-blue-500 dark:text-orange-500 hover:text-blue-600 dark:hover:text-orange-400"
-            aria-label="all posts"
+            aria-label="toutes les recettes"
           >
-            All Posts &rarr;
+            Toutes les recettes &rarr;
           </Link>
         </div>
       )}
