@@ -18,7 +18,7 @@ export async function getStaticProps() {
 
   Une recette peut être une [entrée](/tags/entree), un [plat](/tags/plat), un [dessert](/tags/dessert) et/ou un [apéritif](/tags/aperitif).
 
-  Toutes les recettes doivent contenir un des tags suivants: [vegan](/tags/vegan), [végétarienne](/tags/vegetarienne) et [carnée](/tags/carnee). Une recette est [vegan](/tags/vegan) si elle ne contient aucun ingrédient d'origine animale. Sur Tambouille, une recette est [végétarienne](/tags/vegetarienne) si elle ne contient pas de viande. Une recette [végétarienne](/tags/vegetarienne) sur ce site peut donc contenir du lait, du miel, des oeufs, des mollusques, des insectes ou du poisson. Une recette [carnée](/tags/carnee) est une recette contenant de la viande (e.g. porc, volaille, etc.).
+  Toutes les recettes doivent contenir un des tags suivants: [végétalienne](/tags/vegetalienne), [végétarienne](/tags/vegetarienne) et [carnée](/tags/carnee). Une recette est [végétalienne](/tags/vegetalienne) si elle ne contient aucun ingrédient d'origine animale. Sur Tambouille, une recette est [végétarienne](/tags/vegetarienne) si elle ne contient pas de viande. Une recette [végétarienne](/tags/vegetarienne) sur ce site peut donc contenir du lait, du miel, des oeufs, des mollusques, des insectes ou du poisson. Une recette [carnée](/tags/carnee) est une recette contenant de la viande (e.g. porc, volaille, etc.).
 
   ## Images
 
