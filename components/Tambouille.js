@@ -2,10 +2,9 @@ import Figure from './Figure'
 import siteMetadata from '@/data/siteMetadata'
 
 const Tambouille = (tambouilleProps) => {
-  const slug =
-    siteMetadata.authors[
-      Object.keys(siteMetadata.authors).filter((author) => author.name === tambouilleProps.author)
-    ].slug
+  const slug = Object.values(siteMetadata.authors).filter(
+    (author) => author.name === tambouilleProps.author
+  )[0].slug
   let props = {
     ...tambouilleProps,
     host: 'Tambouille',
