@@ -15,7 +15,7 @@ const Figure = ({ alt, src, srcurl, author, authorurl, host, hosturl }) => {
   //     height={dimensions.height}
   //   />
   // )
-  image = <img className="rounded w-full" style={{ margin: '0' }} alt={alt} src={src} />
+  image = <img className="rounded w-full object-cover object-center" style={{ margin: '0'; max-height: '480px'; }} alt={alt} src={src} />
   let caption = (
     <figcaption className="text-center">
       Photo par{' '}
