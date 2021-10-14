@@ -6,6 +6,7 @@ import Tambouille from './Tambouille'
 
 const MDXComponents = {
   Pexels,
+  Unsplash,
   Wikipedia,
   Tambouille,
   Image,
